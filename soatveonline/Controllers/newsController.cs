@@ -22,20 +22,20 @@ namespace soatveonline.Controllers
             news.Id = _news.Count + 1;
             _news.Add(news);
 
-            return CreatedAtRoute("GetProductById", new { id = news.Id }, news);
+            return CreatedAtRoute("GetnewsById", new { id = news.Id }, news);
         }
 
-        [HttpGet("{id}", Name = "GetProductById")]
+        [HttpGet("{id}", Name = "GetnewsById")]
         public IActionResult GetById(int id)
         {
-            var product = _news.FirstOrDefault(p => p.Id == id);
+            var news = _news.FirstOrDefault(p => p.Id == id);
 
-            if (product == null)
+            if (news == null)
             {
                 return NotFound();
             }
 
-            return Ok(product);
+            return Ok(news);
         }
     }
 }
