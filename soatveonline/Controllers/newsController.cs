@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using HueFestival_OnlineTicket.Core.InterfaceService;
+using HueFestival_OnlineTicket.ViewModel;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using soatveonline.Model;
 using System;
@@ -10,32 +12,61 @@ namespace soatveonline.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class newsController : ControllerBase
+    public class NewsController : ControllerBase
     {
-        private readonly List<news> _news;
+        private readonly INewsService newsService;
 
-        public static List<news> locations = new List<news>();
-
-        [HttpPost]
-        public IActionResult Create(news news)
+        public NewsController(INewsService _newsService)
         {
-            news.Id = _news.Count + 1;
-            _news.Add(news);
-
-            return CreatedAtRoute("GetnewsById", new { id = news.Id }, news);
+            newsService = _newsService;
         }
 
-        [HttpGet("{id}", Name = "GetnewsById")]
-        public IActionResult GetById(int id)
+        [HttpGet("GetAll")]
+        public async Task<IActionResult> GetAll()
+            => Ok(await newsService.GetAllAsync());
+
+        [HttpPost("Add")]
+        public async Task<IActionResult> Add(NewsVM_Input input)
         {
-            var news = _news.FirstOrDefault(p => p.Id == id);
+            if (!ModelState.IsValid)
+                return UnprocessableEntity(ModelState);
 
-            if (news == null)
-            {
+            if (await newsService.AddAsync(input))
+                return Ok("Successfully");
+
+            return BadRequest();
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (await newsService.DeleteAsync(id))
+                return Ok("Delete Successfully");
+
+            return NotFound();
+        }
+
+        [HttpGet("Details")]
+        public async Task<IActionResult> Details(int id)
+        {
+            var result = await newsService.GetDetailsAsync(id);
+
+            if (result is null)
                 return NotFound();
-            }
 
-            return Ok(news);
+            return Ok(result);
+        }
+
+        [HttpPut("Edit")]
+        public async Task<IActionResult> Edit(int id, NewsVM_Input input)
+        {
+            if (!ModelState.IsValid)
+                return UnprocessableEntity(ModelState);
+
+            if (await newsService.UpdateAsync(id, input))
+                return Ok("Edit Successfully");
+
+            return BadRequest();
         }
     }
 }

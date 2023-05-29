@@ -9,7 +9,8 @@ namespace soatveonline.Model
     {
         public string ID { get; set; }
         public string name { get; set; }
-        public string sumary { get; set; }
+        public string summary { get; set; }
+        
         public string images { get; set; }
     }
 }
