@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace soatveonline.Controllers
 {
-   [Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class LocationController : ControllerBase
     {
@@ -31,7 +31,7 @@ namespace soatveonline.Controllers
 
             if (await locationService.AddAsync(locationVM_Input))
                 return Ok("Add Successfully");
-            
+
             return BadRequest();
         }
 
@@ -41,7 +41,7 @@ namespace soatveonline.Controllers
         {
             string userId = User.FindFirstValue("id");
 
-            if (await locationService.AddFavoriteAsync(Int32.Parse(userId), locationId)) 
+            if (await locationService.AddFavoriteAsync(Int32.Parse(userId), locationId))
                 return Ok("Successfully");
 
             return BadRequest();
@@ -50,7 +50,7 @@ namespace soatveonline.Controllers
         [HttpDelete("delete_favorite")]
         public async Task<IActionResult> DeleteFavorite(Guid id)
         {
-            if(await locationService.DeleteFavoriteAsync(id))
+            if (await locationService.DeleteFavoriteAsync(id))
                 return Ok("Delete Successfully");
 
             return Problem(title: "Wrong ID or error, please try again");
@@ -84,7 +84,7 @@ namespace soatveonline.Controllers
             if (!ModelState.IsValid)
                 return UnprocessableEntity(ModelState);
 
-            if(await locationService.UpdateAsync(id, input))
+            if (await locationService.UpdateAsync(id, input))
                 return Ok("Edit Successfully");
 
             return BadRequest();

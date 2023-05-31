@@ -1,5 +1,4 @@
-﻿using soatveonline.Model;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HueFestival_OnlineTicket.Model
@@ -13,12 +12,13 @@ namespace HueFestival_OnlineTicket.Model
         public int LocationId { get; set; }
         public int ShowCategoryId { get; set; }
 
-        [ForeignKey("ProgramId")]
-        public programs Programme { get; set; }
+        //[ForeignKey("ProgramId")]
+        //public Programme Programme { get; set; }
 
-        [ForeignKey("LocationId")]
-        public location Location { get; set; }
+        //[ForeignKey("LocationId")]
+        //public Location Location { get; set; }
 
-        
+        //[ForeignKey("ShowCategoryId")]
+        //public ShowCategory ShowCategory { get; set; }
     }
 }

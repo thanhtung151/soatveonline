@@ -5,7 +5,8 @@ namespace HueFestival_OnlineTicket.ViewModel
     public class LocationVM
     {
         public int Id { get; set; }
-      
+        public string name { get; set; }
+
         public string summary { get; set; }
        
         public string image { get; set; }

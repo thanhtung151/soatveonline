@@ -33,7 +33,7 @@ namespace soatveonline
             services.AddControllers();
             services.AddDbContext<HueFestivalContext>(option =>
             {
-                option.UseSqlServer(Configuration.GetConnectionString("soatve"));
+                option.UseSqlServer(Configuration.GetConnectionString("kiemtrave"));
             });
             services.AddSwaggerGen(c =>
            {

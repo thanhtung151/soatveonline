@@ -11,6 +11,7 @@ namespace soatveonline.Model
         public string price { get; set; }
         public string code { get; set; }
         public decimal status { get; set; }
+
         
     }
 }

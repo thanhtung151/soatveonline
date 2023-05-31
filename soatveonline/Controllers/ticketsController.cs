@@ -14,7 +14,7 @@ namespace soatveonline.Controllers
     {
         private readonly List<tickets> _tickets;
 
-        public static List<tickets> locations = new List<tickets>();
+        public static List<tickets> Tickets = new List<tickets>();
 
         [HttpPost]
         public IActionResult Create(tickets tickets)

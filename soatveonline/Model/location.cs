@@ -12,5 +12,15 @@ namespace soatveonline.Model
         public string summary { get; set; }
         
         public string images { get; set; }
+
+        //public static implicit operator location(location v)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //internal void Add(location location)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
