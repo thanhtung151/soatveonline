@@ -1,15 +1,14 @@
-﻿using HueFestival_OnlineTicket.Core.InterfaceService;
-
-using HueFestival_OnlineTicket.Model;
-using HueFestival_OnlineTicket.ViewModel;
+﻿
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using soatveonline.Core.InterfaceService;
+using soatveonline.ViewModel;
 using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace HueFestival_OnlineTicket.Controllers
+namespace soatveonline.Core.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

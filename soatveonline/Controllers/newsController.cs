@@ -1,8 +1,9 @@
-﻿using HueFestival_OnlineTicket.Core.InterfaceService;
-using HueFestival_OnlineTicket.ViewModel;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using soatveonline.Core.InterfaceService;
 using soatveonline.Model;
+using soatveonline.ViewModell;
 using System;
 using System.Collections.Generic;
 using System.Linq;

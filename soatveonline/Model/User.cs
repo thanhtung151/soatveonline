@@ -1,4 +1,4 @@
-﻿namespace HueFestival_OnlineTicket.Model
+﻿namespace soatveonline.Model
 {
     public class User
     {

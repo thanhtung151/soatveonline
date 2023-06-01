@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HueFestival_OnlineTicket.Model
+namespace soatveonline.Model
 {
     public class Show
     {

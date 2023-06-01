@@ -1,6 +1,4 @@
 ﻿
-
-using HueFestival_OnlineTicket.Model;
 using Microsoft.EntityFrameworkCore;
 using soatveonline.Model;
 

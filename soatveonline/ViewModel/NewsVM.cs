@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace HueFestival_OnlineTicket.ViewModel
+namespace soatveonline.ViewModell
 {
     public class NewsVM
     {

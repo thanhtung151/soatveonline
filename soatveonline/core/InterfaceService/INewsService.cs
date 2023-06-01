@@ -1,8 +1,9 @@
-﻿using HueFestival_OnlineTicket.ViewModel;
+﻿
+using soatveonline.ViewModell;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HueFestival_OnlineTicket.Core.InterfaceService
+namespace soatveonline.Core.InterfaceService
 {
     public interface INewsService
     {

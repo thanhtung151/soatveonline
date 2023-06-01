@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HueFestival_OnlineTicket.ViewModel
+namespace soatveonline.ViewModel
 {
     public class UserVM_Input
     {

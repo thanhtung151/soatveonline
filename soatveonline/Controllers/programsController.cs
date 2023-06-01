@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using soatveonline.Model;
-using HueFestival_OnlineTicket.Core.InterfaceService;
-using HueFestival_OnlineTicket.ViewModel;
+using soatveonline.Core.InterfaceService;
+using soatveonline.ViewModel;
 
 namespace soatveonline.Controllers
 {

@@ -1,8 +1,9 @@
-﻿using HueFestival_OnlineTicket.ViewModel;
+﻿
+using soatveonline.ViewModel;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HueFestival_OnlineTicket.Core.InterfaceService
+namespace soatveonline.Core.InterfaceService
 {
     public interface IHelpMenuService
     {
