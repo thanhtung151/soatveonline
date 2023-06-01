@@ -10,14 +10,14 @@ namespace HueFestival_OnlineTicket.ViewModel
         public int time { get; set; }
         public double Pricstart_date { get; set; }
         public double end_start { get; set; }
-        public List<ProgrammeImageVM> ListProgrammeImage { get; set; }
+      
     }
 
     public class programsVM
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public List<ProgrammeImageVM> ListProgrammeImage { get; set; }
+       
     }
 
     public class programsVM_Details
@@ -28,7 +28,7 @@ namespace HueFestival_OnlineTicket.ViewModel
         public int time { get; set; }
         public double Pricstart_date { get; set; }
         public double end_start { get; set; }
-        public List<ProgrammeImageVM> ListProgrammeImage { get; set; }
+      
         public List<ShowVM> ListShow { get; set; }
     }
 }

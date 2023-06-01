@@ -58,14 +58,7 @@ namespace HueFestival_OnlineTicket.Controllers
 
         
 
-        [HttpPut("update_role")]
-        public async Task<IActionResult> UpdateRole(UserVM_UpdateRole input)
-        {
-            if (await userService.UpdateRoleAsync(input))
-                return Ok("Successfully");
-
-            return BadRequest();
-        }
+        
 
         [HttpGet("get_list_user")]
         public async Task<IActionResult> GetAll()
