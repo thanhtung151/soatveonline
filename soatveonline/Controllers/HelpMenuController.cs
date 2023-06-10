@@ -5,7 +5,7 @@ using soatveonline.ViewModel;
 using System.ComponentModel.Design;
 using System.Threading.Tasks;
 
-namespace soatveonline.Core.Controllers
+namespace soatveonline.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -20,7 +20,7 @@ namespace soatveonline.Data
         
         public DbSet<tickets> Tickets { get; set; }
         public DbSet<Show> Shows { get; set; }
-        public DbSet<HelpMenu> HelpMenus { get; set; }
+        
         public DbSet<User> Users { get; set; }
 
     }

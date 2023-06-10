@@ -7,11 +7,12 @@ namespace soatveonline.Model
 {
     public class tickets
     {
-        public int Id { get; set; }
-        public string price { get; set; }
-        public string code { get; set; }
-        public decimal status { get; set; }
-
-        
+        public int Price { get; set; }
+        public string Code { get; set; }
+        public bool Status { get; set; }
+        public int UserID { get; set; }
+        public virtual User User { get; set; }
+        public int TicketTypeId { get; set; }
+        public virtual TicketTypes TicketTypess { get; set; }
     }
 }
